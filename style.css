@@ -1,0 +1,455 @@
+/* --- GLOBAL DASHBOARD BASE THEME CONFIGURATIONS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri', -apple-system, sans-serif;
+}
+
+/* Moniepoint-inspired dark navy-blue interface color palette */
+.dashboard-body {
+    background-color: #020d1e;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 16px;
+    padding-bottom: 90px;
+    overflow-y: auto;
+}
+
+/* Frame Isolation settings for independent rendering layout */
+.card-isolated-viewport {
+    background: transparent;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* --- INTERFACE HEADER STYLES --- */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: #1a2f4c;
+    border-radius: 50%;
+    border: 2px solid #e1b12c;
+}
+
+.user-level {
+    font-size: 0.9rem;
+    color: #8fa3bf;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.icon-btn-utility {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* --- ACCUMULATED BALANCES MODULE PANEL --- */
+.wallet-card-panel {
+    background-color: #051a34;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+    border: 1px solid #0d294a;
+}
+
+.account-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.account-number-string {
+    font-size: 0.85rem;
+    color: #cedef2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 85%;
+}
+
+.copy-action-icon {
+    background: none;
+    border: none;
+    color: #8fa3bf;
+    cursor: pointer;
+}
+
+.secure-balance-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 6px;
+}
+
+.balance-mask-circles {
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+}
+
+.toggle-visibility-eye {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.timestamp-subtext {
+    font-size: 0.75rem;
+    color: #647b9c;
+    margin-bottom: 16px;
+}
+
+.quick-action-button-row {
+    display: flex;
+    gap: 12px;
+}
+
+.action-pill {
+    background-color: #0c2b54;
+    border: none;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.symbol-plus {
+    color: #20bf6b;
+    font-size: 1.1rem;
+}
+
+/* --- EMBEDDED IFRAME COMPONENT VIEWER WRAPPER --- */
+.iframe-view-container {
+    margin-bottom: 24px;
+}
+
+.section-label-header {
+    font-size: 0.95rem;
+    color: #8fa3bf;
+    margin-bottom: 12px;
+}
+
+.embedded-card-frame {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    background: transparent;
+}
+
+/* --- NATIVE GRID SERVICES MESH STYLING --- */
+.services-module-grid {
+    background-color: #051a34;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #0d294a;
+}
+
+.section-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #cedef2;
+}
+
+.edit-action-link {
+    color: #e1b12c;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.grid-layout-mesh {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.service-item-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.tile-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background-color: #0c2b54;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #a4bcdb;
+}
+
+.tile-tag {
+    font-size: 0.75rem;
+    color: #8fa3bf;
+}
+
+/* --- BOTTOM STICKY PERSISTENT NAVIGATION DOCK --- */
+.bottom-app-dock {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #031326;
+    border-top: 1px solid #0d294a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dock-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #647b9c;
+    cursor: pointer;
+}
+
+.dock-tab.active {
+    color: #e1b12c;
+}
+
+.dock-icon {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+}
+
+.dock-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   4. CRITICAL INTERACTIVE 3D CREDIT CARD ENGINE STYLES (FROM ORIGINAL DESIGN)
+   ========================================================================== */
+
+.card-container {
+    width: 380px;
+    height: 230px;
+    perspective: 1000px;
+}
+
+#card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#card.flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: 14px; /* Curved ends matching target visual layout asset */
+    padding: 24px;
+    background: linear-gradient(135deg, #2c2c2c 0%, #131313 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+/* Background asymmetric curve matching source lines */
+.card-face::before {
+    content: "";
+    position: absolute;
+    left: -1%;
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+    border-radius: 50% 95% 0% 100%;
+    background: rgb(255 255 255 / 3%);
+    pointer-events: none;
+}
+
+/* --- OVER-PLANE HIGH-INTENSITY EDGE-TO-EDGE SHINING LIGHT FLARE --- */
+.card-face::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 30%,
+        rgba(255, 255, 255, 0.75) 50%,
+        rgba(255, 255, 255, 0.4) 70%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    opacity: 0;
+    pointer-events: none;
+    
+    /* Displaces illumination plane ahead of text elements in 3D environment space */
+    z-index: 999;
+    transform: translateZ(15px);
+    -webkit-transform: translateZ(15px);
+}
+
+.sweep-down::after {
+    animation: shineDown 0.75s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.sweep-up::after {
+    animation: shineUp 0.75s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes shineDown {
+    0% { top: -30%; opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { top: 120%; opacity: 0; }
+}
+
+@keyframes shineUp {
+    0% { bottom: -30%; opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { bottom: 120%; opacity: 0; }
+}
+
+/* --- COMPREHENSIVE GOLDEN SMART CARD MICROCHIP SCHEMATIC --- */
+.atm-chip {
+    width: 50px;
+    height: 38px;
+    background: linear-gradient(135deg, #e7be7b 0%, #a47e45 100%);
+    border-radius: 7px;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
+}
+
+.chip-line { position: absolute; background: rgba(0, 0, 0, 0.25); }
+.chip-line.horizontal { top: 50%; left: 0; width: 100%; height: 1px; }
+.chip-line.vertical { left: 50%; top: 0; width: 1px; height: 100%; }
+
+.chip-inner-box {
+    position: absolute;
+    top: 23%; left: 26%; width: 48%; height: 54%;
+    border: 1px solid rgba(0, 0, 0, 0.25); border-radius: 4px;
+}
+
+.chip-branch { position: absolute; width: 26%; height: 1px; background: rgba(0, 0, 0, 0.25); }
+.chip-branch.lt { top: 23%; left: 0; }
+.chip-branch.lb { bottom: 23%; left: 0; }
+.chip-branch.rt { top: 23%; right: 0; }
+.chip-branch.rb { bottom: 23%; right: 0; }
+
+/* --- CARD TEXT NODE ALIGNMENTS --- */
+.bank-name { font-size: 1.1rem; color: #fff; font-weight: 500; }
+.platinum-text { font-size: 1.1rem; font-weight: bold; letter-spacing: 1px; color: rgba(255,255,255,0.9); }
+
+.card-body { margin-top: 15px; color: #fff; }
+.holder-name { font-size: 0.85rem; opacity: 0.6; margin-bottom: 2px; }
+.card-number { font-size: 1.35rem; letter-spacing: 1.5px; font-weight: 500; }
+
+.private-data { display: flex; gap: 30px; margin-top: 25px; }
+.data-row { display: flex; flex-direction: column; }
+.data-row .label { font-size: 0.8rem; color: rgba(255, 255, 255, 0.5); margin-bottom: 2px; }
+.data-row .val { font-size: 1.2rem; font-weight: 500; letter-spacing: 1px; }
+
+.card-footer { display: flex; justify-content: space-between; align-items: center; }
+
+/* Action Interface Button Layout */
+.toggle-btn {
+    background: #252575;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 37, 117, 0.4);
+    transition: background 0.2s;
+}
+.toggle-btn:hover { background: #31319c; }
+
+/* --- BRAND LOGO ASSET CONFIGURATION --- */
+.mastercard-logo { 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    width: 52px; 
+    height: 32px; 
+}
+
+.circle { 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    position: absolute; 
+}
+.red { background: #eb001b; left: 0; }
+.yellow { background: #f79e1b; right: 0; mix-blend-mode: screen; }
+
+.mastercard-text {
+    position: relative;
+    z-index: 5;
+    color: #ffffff;
+    font-size: 0.52rem;
+    font-weight: 700;
+    font-style: italic;
+    letter-spacing: -0.2px;
+    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+}
